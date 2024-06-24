@@ -394,7 +394,107 @@ systemctl status xrdp
 Enabled and Active: <br/>
 <img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<br /> 
+<br />
+
+   - In the AWS EC2 console, select the Kali instance and copy the public IP address:
+
+<p align="center">
+EPublic IP Address: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - In the windows host machine, Start Menu, Search or "Run" box, type "mstsc". This will open the remote desktop service where you can paste your Kali public IP address.
+  - NOTE: If there is a warning about the identity of the machine, click OK and remeber the Kali machine.
+  - 
+<p align="center">
+Remote Desktop: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - In the Kali machine, log in with the username "kali" and the password "kali" and the Kali Home screen will appear.
+
+<p align="center">
+Kali Homescreen: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+
+<h2>Log Into the Ubuntu Instance</h2>
+  - In the AWS EC2 console, select the "Security-Tools" instance and copy the public IP address. Open a new tab in the browser and paste the IP. The instance will run in the browser!
+
+<p align="center">
+Ubuntu Browser Session: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - NOTE: THE PASSWORD FOR THIS SESSION IS THE EC2 INSTANCE ID. Copy and paste the instance ID from the AWS EC2 console into the Ubuntu Web Session as shown:
+
+<p align="center">
+Instance ID: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+
+<p align="center">
+Web Session: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<p align="center">
+Successful Login: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+  - Click Next or configure the options and you will be presented with the Homescreen. Click the "Change VNC Password" so at the next login, you don't have to copy and paste the InstanceID.
+
+<p align="center">
+Change VNC Password: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+
+
+ 
+<h2>Log into Windows Instances using Remote Desktop</h2>
+
+  - In the AWS EC2 console, right-click the Windows AD Instance and click "connect".
+  - 
+<p align="center">
+Connect: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+In the "Connect to Instance" page, select the "RDP Client" tab.
+
+<p align="center">
+RDP Client: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+  - Scroll to the bottom of the RDP Client page and click "Get Password.
+  - Navigate to the .ssh directory and choose the "Terraform.pem" file created earlier:
+
+<p align="center">
+Uploading .pem file: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - Once uploaded, click "Decrypt Password".
+  - Open a new Remote Desktop Session on the Windows host.
+  - Paste the Windows AD Public IP Address.
+  - If there is a warning, click yes to remember the Windows AD Instance
+  - login with the username "Administrator" and the decrypted password from the AWS console.
+<b>Windows Server starts up!</b>
+<b>NOTE: THESE STEPS WILL ALSO LAUNCH THE SECOND WINDOWS INSTANCE. The public IP will be different, but the encrypted password steps will be the same.
+
+
 
 
  
