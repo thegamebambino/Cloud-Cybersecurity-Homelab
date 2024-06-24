@@ -161,7 +161,7 @@ resource "aws_security_group" "linux-security-tools" {
 
 # Create Windows AD Instance.
 resource "aws_instance" "windows-ad" {
-  ami = "ami-060b1c20c93e475fd"
+  ami = "ami-08b66c1b6d6a8a30a"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.public_subnet.id}"
 
@@ -182,7 +182,7 @@ resource "aws_instance" "windows-ad" {
 
 # Create Windows 10 Instance.
 resource "aws_instance" "windows-10" {
-  ami = "ami-060b1c20c93e475fd"
+  ami = "ami-08b66c1b6d6a8a30a"
   instance_type = "t2.micro"
   subnet_id = "${aws_subnet.public_subnet.id}"
 
