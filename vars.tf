@@ -1,6 +1,6 @@
 
-#  ami           = "ami-060b1c20c93e475fd" # Replace with the Windows Server 2022 AMI ID
-#  ami           = "ami-060b1c20c93e475fd" # Replace with the Second Windows Server 2022 AMI
+#  ami           = "ami-08b66c1b6d6a8a30a" # Replace with the Windows Server 2022 AMI ID
+#  ami           = "ami-08b66c1b6d6a8a30a" # Replace with the Second Windows Server 2022 AMI
 #  ami           = "ami-0901bbd9d6e996fb7" # Replace with the Netspectrum AMI ID
 #  ami           = "ami-04911b1f694f455b8" # Replace with the Kali Linux AMI ID
 #  key           = "DesktopKey-US-EAST-2"
