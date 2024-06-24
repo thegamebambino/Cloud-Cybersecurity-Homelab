@@ -362,6 +362,42 @@ Running the script: <br/>
 <br />
 <br />   
   - NOTE: If there is a full screen pop up about restarting services, select "yes" and continue
+  - Hit enter on this screen to keep the local version
+
+ <p align="center">
+Keep the local version: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br /> 
+
+ <b>Once the script is done, use the following command to change the password (choose a secure password in a production environment, but for this practice lab we'll just use the default "kali":</b>
+
+ ```bash
+echo kali:kali | sudo chpasswd
+```
+
+<b>Enable XRDP</b>
+
+```bash
+systemctl enable xrdp --now
+```
+
+<b>Check Status</b>
+
+```bash
+systemctl status xrdp
+```
+
+  - We want to see "enabled" and "active" in the output
+
+<p align="center">
+Enabled and Active: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br /> 
+
+
+ 
 
   
 
