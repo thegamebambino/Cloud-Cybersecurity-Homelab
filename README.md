@@ -265,8 +265,113 @@ Launch the utility: <br/>
 <br />
 <br />
 
+<h2>Connect to EC2 Instances</h2>
 
-</p>
+<b>First, configure remote access (RDP) for the Kali Linux Machine:
+  - Change directory into:
+
+```bash
+~/.ssh
+```
+
+  - Change the permissions for the Terraform.pem file to read only:
+
+```bash
+sudo chmod 400 Terraform.pem
+```
+  - In the AWS console,right-click the kali instance and click "connect" or check the box next to the Kali instance and, at the top of the screen, select "Connect"
+<p align="center">
+Connect to Kali (right-click): <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<p align="center">
+Connect to Kali (menu): <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - In the "Connect to Instance" screen, copy the example ssh command
+
+<p align="center">
+Copy SSH command: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - Paste the SSH command into the Ubuntu Shell. There may be a warning displayed, type yes to continue. It will ask you to log in as "kali" rather than root, so change the command to the following:
+
+<p align="center">
+paste and edit command: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+  - With the correct login command of "kali@ec2-**-***-***-***.us-east-2.compute.amazonaws.com the screen should look like this:
+
+<p align="center">
+successful kali shell: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<b>To configure RDP on this Kali machine type or copy:
+
+```bash
+nano rdp.sh
+```
+  -Press Enter and in the new note, paste the following script:
+
+```bash
+#!/bin/sh
+echo "[i] Updating and upgrading Kali (this will take a while)"
+apt-get update
+apt-get full-upgrade -y
+echo "[i] Installing Xfce4 & xrdp (this will take a while as well)"
+apt-get install -y kali-desktop-xfce xorg xrdp
+
+echo "[i] Configuring xrdp to listen to port 3389 (but not starting the service)"
+sed -i 's/port=3389/port=3389/g' /etc/xrdp/xrdp.ini
+```
+
+  - This will update and upgrade the repositories, install xrdp, and configure it to listen on port 3389.
+  - Ctrl+x, y, enter to save this.
+  - Back in the main shell, change the permissions of the file with:
+
+```bash
+chmod 755 rdp.sh
+```
+
+  - Change to root user:
+```bash
+sudo su
+```
+then
+
+```bash
+./rdp.sh
+```
+
+  - The script will run (this may take a while).
+
+    
+ <p align="center">
+Running the script: <br/>
+<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />   
+  - NOTE: If there is a full screen pop up about restarting services, select "yes" and continue
+
+  
+
+
+
+
+
+
+
+
 
 <!--
  ```diff
