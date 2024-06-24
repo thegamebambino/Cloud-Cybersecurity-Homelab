@@ -160,8 +160,52 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
 sudo apt update && sudo apt install terraform
 ```
 
-  -
+<h2>Enable Billing Alerts</h2>
 
+  - Some of our resources will incur a small fee, to monitor these fees, a billing alert is created to notify the user via email. First, ENABLE billing alerts:
+  - To enable the monitoring of estimated charges
+  - (Open the AWS Billing console)[https://console.aws.amazon.com/billing/].
+  - In the navigation pane, choose Billing Preferences.
+  - By Alert preferences choose Edit.
+  - Choose Receive CloudWatch Billing Alerts.
+  - Choose Save preferences.
+
+<H2>Create a Billing Alert</H2>
+
+  - To create a billing alarm using the CloudWatch console
+  - (Open the CloudWatch console)[https://console.aws.amazon.com/cloudwatch/.
+  - In the navigation pane, choose Alarms, and then choose All alarms.
+  - Choose Create alarm.
+  - Choose Select metric. In Browse, choose Billing, and then choose Total Estimated Charge.
+
+<b>NOTE:</b>
+<b>If you don't see the Billing/Total Estimated Charge metric, enable billing alerts, and change your Region to US East 2 (Ohio).</b>
+
+  - Select the box for the EstimatedCharges metric, and then choose Select metric.
+  - For Statistic, choose Maximum.
+  - For Period, choose 6 hours.
+  - For Threshold type, choose Static.
+  - For "Whenever EstimatedCharges is . . .", choose Greater.
+  - For "than . . .", define the value that you want to cause your alarm to trigger. For example, $10 USD, or whatever the intended budget for this homelab is.
+  - The EstimatedCharges metric values are only in US dollars (USD), and the currency conversion is provided by Amazon Services LLC. For more information, see What is AWS Billing?.
+
+<b>Note:
+After you define a threshold value, the preview graph displays your estimated charges for the current month.</b>
+
+  - Choose Additional Configuration and do the following:
+  - For Datapoints to alarm, specify 1 out of 1.
+  - For Missing data treatment, choose Treat missing data as missing.
+  - Choose Next.
+  - Under Notification, ensure that In alarm is selected. Then specify an Amazon SNS topic to be notified when your alarm is in the ALARM state. The Amazon SNS topic can include your email address so that you recieve email when the billing amount crosses the threshold that you specified.
+  - Choose Next.
+  - Under Name and description, enter a name for your alarm (HOMELAB)
+  - Choose Next.
+  - Under Preview and create, make sure that your configuration is correct, and then choose Create alarm.
+
+<b>Now, when the AWS instances incur more than $10 USD fees, an alert will be sent to email.</b>
+
+
+<h2>Launch the Utility</h2>
 
 
 
