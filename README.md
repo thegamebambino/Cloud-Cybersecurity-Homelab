@@ -206,11 +206,57 @@ After you define a threshold value, the preview graph displays your estimated ch
 
 
 <h2>Launch the Utility</h2>
+<b>In order to securely access the EC2 instances, an SSH key is needed.
+ 
+  - In the AWS Console, create a new SSH Key Pair
+
+  - In the EC2 dashboard, select "Key Pairs", then in the upper right corner "Create New Key Pair"
+  
+<p align="center">
+Create Key Pair: <br/>
+<img src="https://i.imgur.com/FQ12ZdN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+ 
+  - Give the key pair a name like "Terraform"
+  - Select the "RSA" encryption format
+  - Select the ".pem" file format
+  - Create key pair
+
+<p align="center">
+Download Key Pair: <br/>
+<img src="https://i.imgur.com/AM16Lqq.png" height="80%" width="80%" alt="Download Key Pair"/>
+<br />
+<br />
+
+  - This will initiate a download of the key pair. Save the key pair .pem file in the Ubuntu .ssh directory
+
+<p align="center">
+.ssh directory: <br/>
+<img src="https://i.imgur.com/MSznLuo.png" height="80%" width="80%" alt="ssh directory"/>
+<br />
+<br />
 
 
+<h2>Launch the Terraform Utility</h2>
+   - Navigate to the homelab directory.
+   
+```bash
+terraform init
+```
+then
 
+```bash
+terraform plan
+```
+<b>NOTE: If there are any errors in the Terraform scripts, they will show here. Files can be edited and the "plan" command run again.
 
+then if everything looks right with no errors, execute:
 
+```bash
+terraform apply -var="aws-key-Terraform"
+```
+  - Make sure the key matches the .pem file in the .ssh folder.
 
 
 <p align="center">
