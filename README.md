@@ -35,7 +35,7 @@ wsl --install
   - This will, by default install Ubuntu the system and provide a linux shell option within powershell (as well as a faster running Linux Shell application accessible in the Start menu:
 <p align="center">   
 Linux Shell:<br/>
-<img src="https://i.imgur.com/HC523Fd.png" height="80%" width="80%" alt="Linux Shell"/>
+<img src="https://i.imgur.com/XUk3zdC.png" height="80%" width="80%" alt="Linux Shell"/>
 <br />
 <br />
 
@@ -46,7 +46,7 @@ Linux Shell:<br/>
 
 <p align="center">
 Region Selection: <br/>
-<img src="https://i.imgur.com/1YDkg7D.png" height="80%" width="80%" alt="Region Selection"/>
+<img src="https://i.imgur.com/jH40Dmk.png" height="80%" width="80%" alt="Region Selection"/>
 <br />
 
 <b>Create a new IAM (Identity Access Management) User with Access Keys</b>
@@ -54,7 +54,7 @@ Region Selection: <br/>
 <br />
 <p align="center">
 IAM Search: <br/>
-<img src="https://i.imgur.com/wy5bVlZ.png" height="80%" width="80%" alt="IAM Search"/>
+<img src="https://i.imgur.com/XqGuSia.png" height="80%" width="80%" alt="IAM Search"/>
 <br />
 
   - On the left sidebar under "Access Management" Click "Users", and in the next page, click "Create User" in the upper right.
@@ -62,7 +62,7 @@ IAM Search: <br/>
 <br />
 <p align="center">
 New User Creation: <br/>
-<img src="https://i.imgur.com/mbvs6TT.png" height="80%" width="80%" alt="New User Creation"/>
+<img src="https://i.imgur.com/w0uMqrH.png" height="80%" width="80%" alt="New User Creation"/>
 <br />
 
   - In the "Set Permissions" page, choose "Attach Policies Directly". In the search box below, type "VPCFullAccess" and select the policy, then again in the search box, type "EC2FullAccess" and select the policy. Click "Next"
@@ -70,13 +70,13 @@ New User Creation: <br/>
 <br />
 <p align="center">
 VPCFullAccess: <br/>
-<img src="https://i.imgur.com/Jil9K4h.png" height="80%" width="80%" alt="VPCFullAccess"/>
+<img src="https://i.imgur.com/QzNItuC.png" height="80%" width="80%" alt="VPCFullAccess"/>
 <br />
 
 <br />
 <p align="center">
 EC2FullAccess: <br/>
-<img src="https://i.imgur.com/2QfdmZo.png" height="80%" width="80%" alt="EC2FullAccess"/>
+<img src="https://i.imgur.com/3vPO83z.png" height="80%" width="80%" alt="EC2FullAccess"/>
 <br />
 
   -In the "Review" page, ensure both policies are attached and click "Create User".
@@ -85,7 +85,7 @@ EC2FullAccess: <br/>
 <br />
 <p align="center">
 Access Key: <br/>
-<img src="https://i.imgur.com/rZbUgGk.png" height="80%" width="80%" alt="Access Key"/>
+<img src="https://i.imgur.com/DK6Ew6P.png" height="80%" width="80%" alt="Access Key"/>
 <br />
 
   - Create a tag (optional) and "Create access key".
@@ -95,7 +95,7 @@ Access Key: <br/>
 <br />
 <p align="center">
 Access Key: <br/>
-<img src="https://i.imgur.com/urn5SfD.png" height="80%" width="80%" alt="Access Key"/>
+<img src="https://i.imgur.com/xIYuEOr.png" height="80%" width="80%" alt="Access Key"/>
 <br />
 
 <b>[Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)</b>
@@ -130,7 +130,7 @@ nano config
 
 <p align="center">
 AWS Files: <br/>
-<img src="https://i.imgur.com/a4m4VHe.png" height="80%" width="80%" alt="AWS Files"/>
+<img src="https://i.imgur.com/Ktdj1WY.png" height="80%" width="80%" alt="AWS Files"/>
 <br />
 <br />
 
@@ -138,7 +138,7 @@ AWS Files: <br/>
 
 <p align="center">
 Credentials File: <br/>
-<img src="https://i.imgur.com/HKFP2DO.png" height="80%" width="80%" alt="Credentials file"/>
+<img src="https://i.imgur.com/pig8rCJ.png" height="80%" width="80%" alt="Credentials file"/>
 <br />
 <br />
 
