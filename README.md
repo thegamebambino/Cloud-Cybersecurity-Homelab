@@ -239,7 +239,8 @@ Download Key Pair: <br/>
 
 
 <h2>Launch the Terraform Utility</h2>
-   - Navigate to the homelab directory.
+   - Navigate to the homelab directory and clone the required terraform files:
+ 
    
 ```bash
 terraform init
