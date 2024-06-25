@@ -240,7 +240,20 @@ Download Key Pair: <br/>
 
 <h2>Launch the Terraform Utility</h2>
    - Navigate to the homelab directory and clone the required terraform files:
- 
+    - install git if needed with:
+    
+```bash
+sudo apt install git
+```
+
+and clone this repository into the directory:
+
+```bash
+git clone https://github.com/thegamebambino/Cloud-Cybersecurity-Homelab.git
+```
+
+  - This will copy the README and Terraform (.tf) files from this repository into the homelab directory.
+  - Initialize Terraform with: 
    
 ```bash
 terraform init
@@ -262,7 +275,7 @@ terraform apply -var="aws-key-Terraform"
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/jHwPWpu.png" height="80%" width="80%" alt="Launch the Utility"/>
 <br />
 <br />
 
@@ -283,21 +296,16 @@ sudo chmod 400 Terraform.pem
   - In the AWS console,right-click the kali instance and click "connect" or check the box next to the Kali instance and, at the top of the screen, select "Connect"
 <p align="center">
 Connect to Kali (right-click): <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SvXXc0V.png" height="80%" width="80%" alt="Connect to kali (right-click)"/>
 <br />
 <br />
 
-<p align="center">
-Connect to Kali (menu): <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 
   - In the "Connect to Instance" screen, copy the example ssh command
 
 <p align="center">
 Copy SSH command: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/XvmCLHI.png" height="80%" width="80%" alt="SSH Command"/>
 <br />
 <br />
 
@@ -305,17 +313,12 @@ Copy SSH command: <br/>
 
 <p align="center">
 paste and edit command: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ievqgI8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
-  - With the correct login command of "kali@ec2-**-***-***-***.us-east-2.compute.amazonaws.com the screen should look like this:
+  - With the correct login command of "kali@ec2-**-***-***-***.us-east-2.compute.amazonaws.com the screen should look like the above screen capture.
 
-<p align="center">
-successful kali shell: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 
 <b>To configure RDP on this Kali machine type or copy:
 
@@ -359,7 +362,7 @@ then
     
  <p align="center">
 Running the script: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oj057RO.png" height="80%" width="80%" alt="Running the Script"/>
 <br />
 <br />   
   - NOTE: If there is a full screen pop up about restarting services, select "yes" and continue
@@ -367,7 +370,7 @@ Running the script: <br/>
 
  <p align="center">
 Keep the local version: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/S3qSxRU.png" height="80%" width="80%" alt="Keep the Local Version"/>
 <br />
 <br /> 
 
@@ -393,24 +396,18 @@ systemctl status xrdp
 
 <p align="center">
 Enabled and Active: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/PmI3P8G.png" height="80%" width="80%" alt="Enabled and Active"/>
 <br />
 <br />
 
    - In the AWS EC2 console, select the Kali instance and copy the public IP address:
 
-<p align="center">
-EPublic IP Address: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-
   - In the windows host machine, Start Menu, Search or "Run" box, type "mstsc". This will open the remote desktop service where you can paste your Kali public IP address.
   - NOTE: If there is a warning about the identity of the machine, click OK and remeber the Kali machine.
-  - 
+
 <p align="center">
 Remote Desktop: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MdxFN9S.png" height="80%" width="80%" alt="Remote Desktop"/>
 <br />
 <br />
 
@@ -418,7 +415,7 @@ Remote Desktop: <br/>
 
 <p align="center">
 Kali Homescreen: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/QeFUoti.png" height="80%" width="80%" alt="Kali Homescreen"/>
 <br />
 <br />
 
@@ -426,35 +423,19 @@ Kali Homescreen: <br/>
 <h2>Log Into the Ubuntu Instance</h2>
   - In the AWS EC2 console, select the "Security-Tools" instance and copy the public IP address. Open a new tab in the browser and paste the IP. The instance will run in the browser!
 
-<p align="center">
-Ubuntu Browser Session: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+  - NOTE: THE PASSWORD FOR THIS SESSION IS THE EC2 INSTANCE ID. Copy and paste the instance ID from the AWS EC2 console into the Ubuntu Web Session at the top (middle) of the screen:
 
-  - NOTE: THE PASSWORD FOR THIS SESSION IS THE EC2 INSTANCE ID. Copy and paste the instance ID from the AWS EC2 console into the Ubuntu Web Session as shown:
-
-<p align="center">
-Instance ID: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-
-<p align="center">
-Web Session: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 
 <p align="center">
 Successful Login: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/cQgVyVk.png" height="80%" width="80%" alt="Successful Login"/>
 <br />
 <br />
   - Click Next or configure the options and you will be presented with the Homescreen. Click the "Change VNC Password" so at the next login, you don't have to copy and paste the InstanceID.
 
 <p align="center">
 Change VNC Password: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1NOulJk.png" height="80%" width="80%" alt="Change VNC Password"/>
 <br />
 <br />
 
@@ -467,7 +448,7 @@ Change VNC Password: <br/>
   - 
 <p align="center">
 Connect: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/fid05zL.png" height="80%" width="80%" alt="Windows Connect"/>
 <br />
 <br />
 
@@ -475,7 +456,7 @@ In the "Connect to Instance" page, select the "RDP Client" tab.
 
 <p align="center">
 RDP Client: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/KY3ttpn.png" height="80%" width="80%" alt="RDP Client"/>
 <br />
 <br />
   - Scroll to the bottom of the RDP Client page and click "Get Password.
@@ -483,7 +464,7 @@ RDP Client: <br/>
 
 <p align="center">
 Uploading .pem file: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wKIACQZ.png" height="80%" width="80%" alt="Uploading .pem file"/>
 <br />
 <br />
 
