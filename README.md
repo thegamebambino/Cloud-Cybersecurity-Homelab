@@ -473,8 +473,20 @@ Uploading .pem file: <br/>
   - Paste the Windows AD Public IP Address.
   - If there is a warning, click yes to remember the Windows AD Instance
   - login with the username "Administrator" and the decrypted password from the AWS console.
+
 <b>Windows Server starts up!</b>
+
 <b>NOTE: THESE STEPS WILL ALSO LAUNCH THE SECOND WINDOWS INSTANCE. The public IP will be different, but the encrypted password steps will be the same.
+
+<h2>Destroying The Lab to prevent charges</h2>
+
+<b>This lab does incur small charges, so it's important to stop those running services when you're not using them. Terraform makes this easy from the "Homelab Directory" with:</b>
+
+```bash
+terraform destroy
+```
+
+<b>This command will destroy everything created with the 'init, plan, and apply' commands. If you plan to access the lab often, you may want to hibernate the EC2 instances, but be aware that there are other hidden costs such as elastic IPs, S3 buckets, and Internet Gateways (IGW) that each have to be stopped. For more information on AWS EC2 pricing see (https://aws.amazon.com/ec2/pricing/on-demand/).
 
 
 
